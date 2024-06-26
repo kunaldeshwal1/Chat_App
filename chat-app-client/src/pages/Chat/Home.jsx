@@ -15,7 +15,7 @@ function Home() {
   } = useSocketContext();
 
   useEffect(() => {
-    if (invitedNotify) {
+    if (invitedNotify) {Go
       defaultToast(invitedNotify);
     }
     return () => {

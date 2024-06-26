@@ -16,7 +16,7 @@ export const socketListenEvent = (socket, { setSocketValue }) => {
   // receive message
   socket.on('RECEIVE_MESSAGE', (messageData) => {
     console.log('****');
-    console.log('收到訊息了');
+  
     console.log('****');
     setSocketValue((prev) => ({
       ...prev,

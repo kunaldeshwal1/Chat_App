@@ -8,8 +8,9 @@ import { useAuthContext } from '../../context/AuthContext';
 import { useSocketContext } from '../../context/SocketContext';
 import { useAxios } from '../../hooks/useAxios';
 import { socketEmitEvent } from '../../socket/emit';
-
+import useSpeechToText from 'react-hook-speech-to-text';
 function ChatRoomInput({ setChatMessages }) {
+
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [showNotify, setShowNotify] = useState(false);
@@ -100,6 +101,7 @@ function ChatRoomInput({ setChatMessages }) {
       )}
       {chatId ? (
         <RoomField onSubmit={handleInputSubmit}>
+          
           <RoomInput
             type="text"
             name="inputMessage"
